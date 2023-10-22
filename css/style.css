@@ -53,6 +53,7 @@ button {
   height: 664px;
   margin-left: -162.5px;
   margin-top: -332px;
+  overflow: hidden;
 }
 .container .content .demo__card {
   z-index: 2;

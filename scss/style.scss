@@ -19,6 +19,7 @@
             height: $h;
             margin-left: calc($w / -2);
             margin-top: calc($h / -2);
+            overflow: hidden;
 
             &__card {
                 z-index: 2;
