@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:regular");
+@import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister:regular");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 14px;
+}
+
+body {
+  max-width: 1920px;
+  width: 100%;
+  height: 1080px;
+  background: linear-gradient(180deg, #e798b9 0%, #222 64.41%);
+  overflow: hidden;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+}
+.container .content {
+  max-width: 365px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  height: 900px;
+}
+.container .content .demo {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 325px;
+  height: 664px;
+  margin-left: -162.5px;
+  margin-top: -332px;
+}
+.container .content .demo__card {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 100%;
+  background-color: #fff;
+  border-radius: 25px;
+}
+.container .content .demo__card.reset {
+  transition: transform 0.3s;
+  transform: translateX(0) !important;
+}
+.container .content .demo__card.reset .demo__card__choice {
+  transition: opacity 0.3s;
+  opacity: 0 !important;
+}
+.container .content .demo__card.inactive {
+  transition: transform 0.3s;
+}
+.container .content .demo__card.to-left {
+  transform: translateX(-30rem) rotate(-30deg) !important;
+}
+.container .content .demo__card.to-right {
+  transform: translate(30rem) rotate(30deg) !important;
+}
+.container .content .demo__card.below {
+  z-index: 1;
+}
+.container .content .demo__card__img {
+  overflow: hidden;
+  width: 325px;
+  height: 508px;
+  margin: 0 auto 0;
+  background-image: url("//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg");
+  background-size: cover;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px 0px rgba(231, 152, 185, 0.25);
+}
+.container .content .demo__card__img img {
+  width: 325px;
+  height: 664px;
+}
+.container .content .demo__card .caption {
+  width: 325px;
+  padding: 20px 0 0 26px;
+  background: #ffffff;
+}
+.container .content .demo__card .caption .caption__namenage {
+  font-size: 32px;
+  text-shadow: 0px 1px 1px rgba(231, 152, 185, 0.35);
+}
+.container .content .demo__card .caption .data__categories::before {
+  display: none;
+}
+.container .content .demo__card__choice {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 25px;
+}
+.container .content .demo__card__choice:after {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 35%;
+  left: 18%;
+}
+.container .content .demo__card__choice.m--reject {
+  background: rgb(219, 52, 52);
+}
+.container .content .demo__card__choice.m--reject:after {
+  content: url("/images/icons/brokenheart.png");
+}
+.container .content .demo__card__choice.m--like {
+  background: rgb(50, 137, 50);
+}
+.container .content .demo__card__choice.m--like:after {
+  content: url("/images/icons/imgonline-com-ua-Resize-FJOonFpACo8c.png");
+  left: 22%;
+}
+.container .content .demo__card__drag {
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+.container .content .menu {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  position: absolute;
+  width: 317px;
+  left: 50%;
+  top: 86%;
+  margin-left: -162.5px;
+}
+.container .content .menu__book::after {
+  content: "Book A Girl";
+  position: absolute;
+  margin-top: 68px;
+  margin-left: -75px;
+  color: #fff;
+  font-family: Love Ya Like A Sister;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.container .content__playboy-logo {
+  position: absolute;
+  left: 45%;
+  top: 70%;
+  width: 212px;
+  height: 326.224px;
+}

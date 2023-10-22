@@ -1,0 +1,178 @@
+@import "reset";
+@import "vars";
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    .content {
+        max-width: $w + 40px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+        height: 900px;
+        .demo {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            width: $w;
+            height: $h;
+            margin-left: calc($w / -2);
+            margin-top: calc($h / -2);
+
+            &__card {
+                z-index: 2;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform-origin: 50% 100%;
+                background-color: #fff;
+                border-radius: 25px;
+                &.reset {
+                    transition: transform 0.3s;
+                    transform: translateX(0) !important;
+
+                    .demo__card__choice {
+                        transition: opacity 0.3s;
+                        opacity: 0 !important;
+                    }
+                }
+
+                &.inactive {
+                    transition: transform 0.3s;
+                }
+
+                &.to-left {
+                    transform: translateX(-30rem) rotate(-30deg) !important;
+                }
+
+                &.to-right {
+                    transform: translate(30rem) rotate(30deg) !important;
+                }
+
+                &.below {
+                    z-index: 1;
+                }
+
+                &__img {
+                    overflow: hidden;
+                    width: $imgWidth;
+                    height: $imgHeight;
+                    margin: 0 auto 0;
+                    background-image: url("//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg");
+                    background-size: cover;
+                    border-radius: 25px;
+                    box-shadow: 0px 4px 4px 0px rgba(231, 152, 185, 0.25);
+                    img {
+                        width: $w;
+                        height: $h;
+                    }
+                }
+
+                .caption {
+                    width: 325px;
+                    padding: 20px 0 0 26px;
+                    background: #ffffff;
+                    .caption__namenage {
+                        font-size: 32px;
+                        text-shadow: 0px 1px 1px rgba(231, 152, 185, 0.35);
+                    }
+                    .data {
+                        &__categories {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &__choice {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    border-radius: 25px;
+
+                    &:after {
+                        position: absolute;
+                        width: 50px;
+                        height: 50px;
+                        top: 35%;
+                        left: 18%;
+                    }
+
+                    &.m--reject {
+                        background: $red;
+                        &:after {
+                            content: url("/images/icons/brokenheart.png");
+                        }
+                    }
+
+                    &.m--like {
+                        background: $green;
+                        &:after {
+                            content: url("/images/icons/imgonline-com-ua-Resize-FJOonFpACo8c.png");
+                            left: 22%;
+                        }
+                    }
+                }
+
+                &__drag {
+                    z-index: 5;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    cursor: grab;
+                }
+            }
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            position: absolute;
+            width: 317px;
+            left: 50%;
+            top: 86%;
+            margin-left: calc($w / -2);
+
+            // button {
+            //     img {
+            //         &:hover {
+            //             box-shadow: 0px 4px 4px 0px rgba(231, 152, 185, 0.25);
+            //         }
+            //     }
+            // }
+            &__book {
+                &::after {
+                    content: "Book A Girl";
+                    position: absolute;
+                    margin-top: 68px;
+                    margin-left: -75px;
+                    color: #fff;
+                    font-family: Love Ya Like A Sister;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        &__playboy-logo {
+            position: absolute;
+            left: 45%;
+            top: 70%;
+            width: 212px;
+            height: 326.224px;
+        }
+    }
+}
