@@ -14,7 +14,7 @@
         .demo {
             position: absolute;
             left: 50%;
-            top: 45%;
+            top: 24%;
             width: $w;
             height: $h;
             margin-left: calc($w / -2);
@@ -60,7 +60,6 @@
                 &__img {
                     overflow: hidden;
                     width: $imgWidth;
-                    height: $imgHeight;
                     margin: 0 auto 0;
                     background-image: url("//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg");
                     background-size: cover;

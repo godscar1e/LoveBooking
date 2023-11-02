@@ -48,11 +48,11 @@ button {
 .container .content .demo {
   position: absolute;
   left: 50%;
-  top: 45%;
+  top: 24%;
   width: 325px;
-  height: 664px;
+  height: 75%;
   margin-left: -162.5px;
-  margin-top: -332px;
+  margin-top: -37.5%;
   overflow: hidden;
 }
 .container .content .demo__card {
@@ -89,7 +89,6 @@ button {
 .container .content .demo__card__img {
   overflow: hidden;
   width: 325px;
-  height: 508px;
   margin: 0 auto 0;
   background-image: url("//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg");
   background-size: cover;
@@ -98,7 +97,7 @@ button {
 }
 .container .content .demo__card__img img {
   width: 325px;
-  height: 664px;
+  height: 75%;
 }
 .container .content .demo__card .caption {
   width: 325px;
