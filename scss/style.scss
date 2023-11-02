@@ -4,6 +4,7 @@
 .container {
     max-width: 1920px;
     width: 100%;
+    margin-top: 30px;
     .content {
         max-width: $w + 40px;
         width: 100%;
@@ -14,11 +15,11 @@
         .demo {
             position: absolute;
             left: 50%;
-            top: 24%;
+            // top: 24%;
             width: $w;
             height: $h;
             margin-left: calc($w / -2);
-            margin-top: calc($h / -2);
+            // margin-top: calc($h / -2);
             overflow: hidden;
 
             &__card {
